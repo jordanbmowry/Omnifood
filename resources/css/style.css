@@ -62,7 +62,7 @@ h3 {
 h1 {
 	color: #fff;
 	margin-top: 0;
-	font: size 240%; /*% is based on the font-size declared in html selector*/
+	font-size: 240%; /*% is based on the font-size declared in html selector*/
 	word-spacing: 4px;
 	margin-bottom: 20px;
 	letter-spacing: 1px;
@@ -196,7 +196,7 @@ btn-full:hover,
 
 header {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url(img/hero.jpg);
+		url(img/hero-min.jpg);
 	background-size: cover;
 	background-position: center;
 	height: 100vh;
@@ -211,8 +211,7 @@ header {
 	transform: translate(-50%, -50%);
 }
 
-.logo
- {
+.logo {
 	height: 100px;
 	width: auto;
 	float: left;
@@ -253,6 +252,19 @@ header {
 .main-nav li a:active {
 	border-bottom: 2px solid #e67e22;
 }
+/*Mobile Navi*/
+.mobile-nav-icon {
+	float: right;
+	margin-top: 30px;
+	cursor: pointer;
+	display: none;
+}
+
+.mobile-nav-icon i {
+	font-size: 200%;
+	color: #fff;
+}
+
 /* Sticky navi */
 .sticky {
 	position: fixed;
@@ -409,7 +421,7 @@ header {
 
 .section-testimonials {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-		url(img/back-customers.jpg);
+		url(img/back-customers-min.jpg);
 	background-size: cover;
 	color: #fff;
 	background-attachment: fixed;
@@ -434,8 +446,8 @@ blockquote:before {
 	font-size: 500%;
 	display: block;
 	position: absolute;
-	top: -5;
-	left: -3;
+	top: -5px;
+	left: -3px;
 }
 
 cite img {
@@ -609,4 +621,27 @@ footer p {
 	color: #888;
 	text-align: center;
 	margin-top: 20px;
+}
+
+/*------------------------------*/
+/*animations*/
+/*-------------------------------*/
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+	opacity: 0;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+}
+
+.js--wp-4 {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+}
+
+.js--wp-1.animate__animated animate__fadeIn,
+.js--wp-2.animate__animated animate__fadeInUp,
+.js--wp-3.animate__animated animate__fadeIn {
+	opacity: 1;
 }
